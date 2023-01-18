@@ -1,4 +1,4 @@
-FROM python:3.8-slim-buster
+FROM  python3 main.py
 
 RUN apt update && apt upgrade -y
 
@@ -10,9 +10,9 @@ RUN cd /
 
 RUN pip3 install -U pip && pip3 install -U -r requirements.txt
 
-RUN mkdir /INSTANOTIFICATION
+RUN mkdir /instafeed
 
-WORKDIR /INSTANOTIFICATION
+WORKDIR /instafeed
 
 COPY start.sh /start.sh
 
